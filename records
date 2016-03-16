@@ -1,0 +1,14 @@
+package comicbooksearchengine;
+import java.util.ArrayList;
+
+public class records {
+    private ArrayList<comicBook> comicBooks, sortedComicBooks;
+    
+    // methods
+    public void addComic(comicBook comic){comicBooks.add(comic);};
+    public void deleteComic(comicBook comic){};
+    public void saveComic(comicBook comic){};
+    public void searchComic(comicBook comic){};
+    public void showDescription(comicBook comic){};
+    public void editComic(comicBook comic){};
+}
