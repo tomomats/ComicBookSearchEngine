@@ -1,0 +1,26 @@
+package comicbooksearchengine;
+
+public class comicBook {
+    private String author, genre, title, description;
+    private int id, rating;
+	
+    // Constructor
+    public comicBook(String title, int rating){
+        setTitle(title); setRating(rating);
+    }
+
+    // Accessor methods
+    public int getId(){return id;}
+    public String getAuthor(){return author;}
+    public int getRating(){return rating;}
+    public String getGenre(){return genre;}
+    public String getTitle(){return title;}
+    public String getDescription(){return description;}
+
+    // Mutator methods
+    public void setAuthor(String author){this.author=author;}
+    public void setRating(int rating){this.rating=rating;}
+    public void setGenre(String genre){this.genre=genre;}
+    public void setTitle(String title){this.title=title;}
+    public void setDescription(String description){this.description=description;}
+}
