@@ -2,7 +2,7 @@ package comicbooksearchengine;
 
 public class ComicBook {
     
-    private String title, description;
+    private String title, description, genre, author;
     private int rating, id;
     
     public ComicBook(String title, int rating){
@@ -32,6 +32,16 @@ public class ComicBook {
     
     public void setDescription(String description){
        this.description = description;
+    }
+    
+    public void setGenre(String genre){
+        this.genre = genre;
+    
+    }
+    
+    public void  setAuthor(String author){
+        this.author = author;
+    
     }
     
     
