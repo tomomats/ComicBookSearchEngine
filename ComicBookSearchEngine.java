@@ -1,5 +1,7 @@
 
  package comicbooksearchengine;
+import static comicbooksearchengine.lists.preSetComicList;
+import java.util.ArrayList;
  import javafx.application.Application;
  import javafx.event.ActionEvent;
  import javafx.event.EventHandler;
@@ -80,20 +82,20 @@ import javafx.geometry.Pos;
          
          
          
-         GridPane comicDataGridPane = new GridPane();
+        GridPane comicDataGridPane = new GridPane();
         comicDataGridPane.add(txtTitle, 0,0, 3, 1);
-         comicDataGridPane.add(txtAuthor, 0,1, 3, 1);
-         comicDataGridPane.add(txtGenre,0,2);
-         comicDataGridPane.add(txtRating, 1, 2);
+        comicDataGridPane.add(txtAuthor, 0,1, 3, 1);
+        comicDataGridPane.add(txtGenre,0,2);
+        comicDataGridPane.add(txtRating, 1, 2);
          
-         // sets the spacing for the horizontal and vertical spacing between nodes
-         comicDataGridPane.setHgap(5);
-         comicDataGridPane.setVgap(5);
+        // sets the spacing for the horizontal and vertical spacing between nodes
+        comicDataGridPane.setHgap(5);
+        comicDataGridPane.setVgap(5);
          
-         // sets the spacing for the horizontal and vertical spacing between nodes and postion
-         gridPaneForBottom.setHgap(5);
-         gridPaneForBottom.setVgap(5);
-         gridPaneForBottom.setAlignment(Pos.CENTER);
+        // sets the spacing for the horizontal and vertical spacing between nodes and postion
+        gridPaneForBottom.setHgap(5);
+        gridPaneForBottom.setVgap(5);
+        gridPaneForBottom.setAlignment(Pos.CENTER);
           
         // set the spacing between noded for the grid panes  
         Insets mainLabelInset = new Insets(5, 5, 5, 5);
@@ -133,7 +135,10 @@ import javafx.geometry.Pos;
                 
          //Below is a test for using the comic book class with the gui.
         ComicBook testComic = new ComicBook("Superman", 5);
-        
+        ArrayList <ComicBook> comics = new ArrayList <ComicBook>();
+        Records record = new Records();
+        lists list = new lists();
+        lists.preSetComicList(comics);
         // event listener for search button
          btnSearch.setOnAction(new EventHandler<ActionEvent>(){
              @Override
@@ -142,7 +147,15 @@ import javafx.geometry.Pos;
              }
         });
      
-        
+        btnNextRecord.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent event){
+              txtDescription.setText(list.nextRecord(comics));
+                
+            }
+            
+            
+        });
          
          Scene scene = new Scene(root);
          

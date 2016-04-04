@@ -1,5 +1,4 @@
 package comicbooksearchengine;
-
 public class ComicBook {
     
     private String title, description, genre, author;
@@ -10,7 +9,6 @@ public class ComicBook {
          setRating(rating);
          //setId(id);
     }
-
     // Setter/Mutator Methods
     public void setTitle(String title){
         if(title == null || title.equals(" ")){
