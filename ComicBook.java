@@ -1,15 +1,18 @@
-package comicbooksearchengine;
+package application;
+
 public class ComicBook {
     
     private String title, description, genre, author;
     private int rating, id;
     
+    // Constructor
     public ComicBook(String title, int rating){
          setTitle(title);
          setRating(rating);
          //setId(id);
     }
-    // Setter/Mutator Methods
+    
+    // Mutator Methods
     public void setTitle(String title){
         if(title == null || title.equals(" ")){
             throw new IllegalArgumentException("Error: A comic title can not" +
@@ -42,8 +45,7 @@ public class ComicBook {
     
     }
     
-    
-    // Getter/ Methods
+    // Accessor Methods
     public String getTitle(){
         return title;
     }
